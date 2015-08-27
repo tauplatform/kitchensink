@@ -1,0 +1,35 @@
+sdk: ../../tau
+sdkversion: "4.0.0"
+name: "Kitchen Sink"
+version: "1.30.59"
+vendor: "rhomobile"
+build: "debug"
+bbver: 6.0
+applog: "rholog.txt"
+iphone:
+  configuration: "Release"
+  sdk: "iphonesimulator6.1"
+  provisionprofile: 
+  codesignidentity: 
+  entitlements: 
+  BundleIdentifier: "com.rhomobile.rhodes-app"
+  BundleURLScheme: "rhodes-app"
+wp:
+  productid: "689a2850-8ff7-0130-db8c-38f6b118e4ff"
+wm:
+  sdk: "Windows Mobile 6.5.3 Professional DTK (ARMV4I)"
+symbian:
+  uid: "0xe8a1ed84"
+android:
+  version: "5.0.1"
+  capabilities:
+    - hardware_acceleration
+extensions:
+  - mediaplayer
+  - screenorientation
+  - sensor
+capabilities:
+  - camera
+  - calendar
+#app_type: "rhoelements"
+motorola_license: "`KLnr7lK`hk1a=toPb1rL.T2W)qt7].UT2F[`mtiaisH72Ua_R/-c@up/:1,P3V7_zJ-3Ts:T*El_Kh,`(nwLBDCGMVTd#i:qrkj2GgJIY5LXh7dnEg$J)o$d(osq`V)bRO$;t;S"

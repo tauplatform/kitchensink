@@ -1,0 +1,44 @@
+<div data-role="page">
+
+  <%= render :partial => "/partials/page_head" %>
+    
+  <div data-role="content">
+  
+    <%= render :partial => "/partials/example_header", :locals => {:title => "Transactions", :description => "
+      Please note: this sample requires you to first run \"Seed DB\".<br>
+
+      The table below shows the contents of the Users table. This sample will:
+      <ul>
+        <li>Execute the following SQL: Delete from users_sample where active = 1</li>
+        <li>Rollback the transaction</li>
+        <li>Change active to false for users 2, 3, 4 and 5 </li>
+        <li>Commit the transaction</li>
+      </ul>
+      The end result is that the first SQL statement (delete from users_sample) will have no effect because the first transaction will be rolled back and only the second set of changes will persist. The code is commented so that you can follow along.
+    " }
+    %>
+
+    <%= render :partial => "/partials/language_tabs" %>
+    
+    <div class="sample ruby">
+      <a href="<%= url_for :action => :transactions %>" data-role="button">Transactions</a>
+    </div>
+    
+    <div class="sample javascript">
+          <a href="#" data-role="button" onclick="KitchenSink.Samples.Database.transactions()">Transactions</a>
+    </div>
+    
+
+    <table>
+      <tr>
+        <th>User ID</th><th>Active</th>
+      </tr>
+      <% @users.each do |user| %>
+      <tr>
+        <td><%= user["user_id"] %></td><td><%= user["active"] == 1 ? "Yes" : "No" %></td>
+      </tr>
+      <% end %>
+    </table>
+      
+    <a href="<%= url_for :action => :confirm_seed_db %>" data-role="button">Re-seed DB to see changes</a>
+  </div>

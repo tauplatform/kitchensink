@@ -1,0 +1,24 @@
+<div data-role="page">
+
+  <%= render :partial => "/partials/page_head" %>
+    
+  <div data-role="content">
+  
+    <%= render :partial => "/partials/example_header", :locals => {:title => "Headers and verbs", :description => "
+      Perform a HTTP GET request and a HTTP Post request to the specified URL. Network connection is required to test this sample.
+    " }
+    %>
+
+    <%= render :partial => "/partials/language_tabs" %>
+    
+    <div class="sample ruby">
+      <a href="#" data-role="button" onclick="KitchenSink.Samples.Network.call_ruby_method_via_ajax('get')">GET</a>
+      <a href="#" data-role="button" onclick="KitchenSink.Samples.Network.call_ruby_method_via_ajax('post')">POST</a>
+    </div>
+    
+    <div class="sample javascript">
+          <a href="#" data-role="button" onclick="KitchenSink.Samples.Network.get()">GET</a>
+          <a href="#" data-role="button" onclick="KitchenSink.Samples.Network.post()">POST</a>
+    </div>
+  </div>
+</div>
