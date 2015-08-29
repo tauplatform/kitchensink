@@ -26,7 +26,12 @@ KitchenSink.Samples.File = KitchenSink.Samples.File || (function($, KitchenSink)
 	}
 
 	function browse_filesystem(start_from_path) {
-		start_from_path = start_from_path || Rho.Application.appsBundleFolder;
+		if ( Rho.System.platform != "ANDROID" ) {
+			start_from_path = start_from_path || Rho.Application.appsBundleFolder;
+		} else {
+			start_from_path = start_from_path || "/mnt/sdcard";
+		}
+
 		var folders = [];
 		var files = [];
 

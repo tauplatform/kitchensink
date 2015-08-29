@@ -6,8 +6,12 @@ require 'helpers/browser_helper'
 class FileController < Rho::RhoController
   include BrowserHelper
   def browse_filesystem
-    @start_from_path = @params["start_from_path"] || Rho::Application.appsBundleFolder
-
+    if (Rho::System.platform != "ANDROID")
+        @start_from_path = @params["start_from_path"] || Rho::Application.appsBundleFolder
+    else
+        @start_from_path = @params["start_from_path"] || "/mnt/sdcard"
+    end
+ 
     @folders = []
     @files = []
 
