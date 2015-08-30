@@ -27,7 +27,7 @@ class SystemController < Rho::RhoController
     #install an android application from given url
     Rho::System.applicationInstall(get_install_app_url)
     Rho::Notification.showPopup({
-      :title => "RhoMobile 4.0 Kitchen Sink",
+      :title => "Tau Platform Kitchen Sink",
       :message => "Application is ready to install",
       :buttons => ["OK"]
     })
@@ -39,13 +39,13 @@ class SystemController < Rho::RhoController
     if Rho::System.isApplicationInstalled(get_uninstall_app_name)
       Rho::System.applicationUninstall(get_uninstall_app_name)
       Rho::Notification.showPopup({
-        :title => "RhoMobile 4.0 Kitchen Sink",
+        :title => "Tau Platform Kitchen Sink",
         :message => "simple_app is uninstalled",
         :buttons => ["OK"]
       })
     else 
       Rho::Notification.showPopup({
-        :title => "RhoMobile 4.0 Kitchen Sink",
+        :title => "Tau Platform Kitchen Sink",
         :message => "Please install application before running this sample",
         :buttons => ["OK"]
       })
@@ -78,7 +78,7 @@ class SystemController < Rho::RhoController
     destination_zip = Rho::RhoFile.join(Rho::Application.userFolder, "public.zip")
   	Rho::System.zipFiles(destination_zip, Rho::Application.publicFolder, ["css", "images"])
     Rho::Notification.showPopup({
-      :title => "RhoMobile 4.0 Kitchen Sink",
+      :title => "Tau Platform Kitchen Sink",
       :message => "Zip succuss",
       :buttons => ["OK"]
     })

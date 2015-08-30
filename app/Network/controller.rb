@@ -21,7 +21,7 @@ class NetworkController < Rho::RhoController
 
   def detect_connection
     Rho::Notification.showPopup({
-      :title => "RhoMobile 4.0 Kitchen Sink",
+      :title => "Tau Platform Kitchen Sink",
       :message => "Detect connection host motorolasolutions.com",
       :buttons => ["OK"]
     })
@@ -38,13 +38,13 @@ class NetworkController < Rho::RhoController
   	puts "Detect connection callback event #{@params}---------------"
   	if @params['connectionInformation'] == 'Disconnected'
       Rho::Notification.showPopup({
-        :title => "RhoMobile 4.0 Kitchen Sink",
+        :title => "Tau Platform Kitchen Sink",
         :message => "Connection Lost",
         :buttons => ["OK"]
       })
   	else
       Rho::Notification.showPopup({
-        :title => "RhoMobile 4.0 Kitchen Sink",
+        :title => "Tau Platform Kitchen Sink",
         :message => "Connection Restored",
         :buttons => ["OK"]
       })
@@ -55,7 +55,7 @@ class NetworkController < Rho::RhoController
     # Request the system to check every 3 seconds and call us back if there is a change in network connectivity
   	Rho::Network.startStatusNotify(3000, url_for(:action => :status_notify_callback))
     Rho::Notification.showPopup({
-      :title => "RhoMobile 4.0 Kitchen Sink",
+      :title => "Tau Platform Kitchen Sink",
       :message => "Started network status notifications",
       :buttons => ["OK"]
     })
@@ -65,7 +65,7 @@ class NetworkController < Rho::RhoController
   # This is our notification that the status of the network changed. old_status and new_status can be "disconnected" or "connected"
   def status_notify_callback
     Rho::Notification.showPopup({
-      :title => "RhoMobile 4.0 Kitchen Sink",
+      :title => "Tau Platform Kitchen Sink",
       :message => "Network status changed from #{@params["prev_status"]} to #{@params["current_status"]}",
       :buttons => ["OK"]
     })
@@ -75,7 +75,7 @@ class NetworkController < Rho::RhoController
     # Stop network status notifications
   	Rho::Network.stopStatusNotify
     Rho::Notification.showPopup({
-      :title => "RhoMobile 4.0 Kitchen Sink",
+      :title => "Tau Platform Kitchen Sink",
       :message => "Stopped network status notifications",
       :buttons => ["OK"]
     })
@@ -103,7 +103,7 @@ class NetworkController < Rho::RhoController
   def upload_file_callback
   	if @params["status"] == "ok"
       Rho::Notification.showPopup({
-        :title => "RhoMobile 4.0 Kitchen Sink",
+        :title => "Tau Platform Kitchen Sink",
         :message => "Upload Succeeded",
         :buttons => ["OK"]
       })
@@ -132,7 +132,7 @@ class NetworkController < Rho::RhoController
   def download_file_callback
   	if @params["status"] == "ok"
       Rho::Notification.showPopup({
-        :title => "RhoMobile 4.0 Kitchen Sink",
+        :title => "Tau Platform Kitchen Sink",
         :message => "Download Success. File saved to " + Rho::RhoFile.join(Rho::Application.userFolder, "sample.png"),
         :buttons => ["OK"]
       })
@@ -164,7 +164,7 @@ class NetworkController < Rho::RhoController
   
   def show_popup(message)
     Rho::Notification.showPopup({
-      :title => "RhoMobile 4.0 Kitchen Sink",
+      :title => "Tau Platform Kitchen Sink",
       :message => message,
       :buttons => ["OK"]
     })
@@ -192,7 +192,7 @@ class NetworkController < Rho::RhoController
   def post_callback
     if @params['status'] == "ok"
       Rho::Notification.showPopup({
-        :title => "RhoMobile 4.0 Kitchen Sink",
+        :title => "Tau Platform Kitchen Sink",
         :message => "POST request Success - #{@params['body']}",
         :buttons => ["OK"]
       })
@@ -217,7 +217,7 @@ class NetworkController < Rho::RhoController
         :authPassword => "test12345"
       )
       Rho::Notification.showPopup({
-        :title => "RhoMobile 4.0 Kitchen Sink",
+        :title => "Tau Platform Kitchen Sink",
         :message => "#{@response['body']}",
         :buttons => ["OK"]
       })

@@ -88,7 +88,7 @@ class LogController < Rho::RhoController
       render :action => :server_log
     else
       Rho::Notification.showPopup({
-        :title => "RhoMobile 4.0 Kitchen Sink",
+        :title => "Tau Platform Kitchen Sink",
         :message => "Log FileContents are empty",
         :buttons => ["OK"]
       })
@@ -98,7 +98,7 @@ class LogController < Rho::RhoController
 
   def send_log_callback
     Rho::Notification.showPopup({
-        :title => "RhoMobile 4.0 Kitchen Sink",
+        :title => "Tau Platform Kitchen Sink",
         :message => "Result of sending log file: #{@params["status"]}",
         :buttons => ["OK"]
     })

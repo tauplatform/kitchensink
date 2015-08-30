@@ -17,16 +17,16 @@ rhobundle_zip_pwd = nil
 MinSeverity  = 4 
 
 # enable copy log messages to standard output, useful for debugging
-LogToOutput = 0
+LogToOutput = 1
 
 # '*' means all categories, otherwise list them : Cat1, Cat2 
-LogCategories = 
+LogCategories = *
 
 # what categories to exclude
 ExcludeLogCategories = 
 
 # max log file size in Bytes, set 0 to unlimited size; when limit is reached, log wraps to beginning of file
-MaxLogFileSize=1
+MaxLogFileSize = 1
 
 # turn on local http server traces, off by default
 #net_trace = 0

@@ -32,7 +32,7 @@ class NativeMenubarController < Rho::RhoController
     ]
 
     Rho::Notification.showPopup({
-      :title => "RhoMobile 4.0 Kitchen Sink",
+      :title => "Tau Platform Kitchen Sink",
       :message => "Items added - check the app's left-key menu",
       :buttons => ["OK"]
     })
@@ -42,7 +42,7 @@ class NativeMenubarController < Rho::RhoController
 
   def show_alert_1
     Rho::Notification.showPopup({
-      :title => "RhoMobile 4.0 Kitchen Sink",
+      :title => "Tau Platform Kitchen Sink",
       :message => "This alert was invoked from a NativeMenubar item",
       :buttons => ["OK"]
     })
@@ -51,7 +51,7 @@ class NativeMenubarController < Rho::RhoController
 
   def show_alert_2
     Rho::Notification.showPopup({
-      :title => "RhoMobile 4.0 Kitchen Sink",
+      :title => "Tau Platform Kitchen Sink",
       :message => "This is another alert, also called from the NativeMenubar",
       :buttons => ["OK"]
     })

@@ -12,7 +12,7 @@ class KeycaptureController < Rho::RhoController
 
   def keycapture_callback
     Rho::Notification.showPopup({
-      :title => "RhoMobile 4.0 Kitchen Sink",
+      :title => "Tau Platform Kitchen Sink",
       :message => "Captured key: #{@params["keyValue"]}",
       :buttons => ["OK"]
     })

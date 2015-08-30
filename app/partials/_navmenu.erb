@@ -38,6 +38,10 @@
     </div>
 <%
 =end %>
+
+<%
+=begin %>        
+
     <div data-role="collapsible" data-filter="battery status indicator">
       <h3>Battery</h3>
 
@@ -50,6 +54,9 @@
         <% end %>
       </ul>
     </div>
+<%
+=end %>        
+
   
     <div data-role="collapsible" data-filter="camera picture image gallery">
       <h3>Camera</h3>
@@ -65,6 +72,9 @@
       </ul>
     </div>
  
+<%
+=begin %>        
+
     <div data-role="collapsible"  data-filter="cardreader card reader msr magnetic stripe credit identification">
       <h3>Card reader</h3>
       
@@ -82,6 +92,9 @@
      </ul>
       
     </div>
+
+<%
+=end %>        
        
     
     <div data-role="collapsible" data-filter="database rhom db seed transactions sql commit rollback">
@@ -221,6 +234,8 @@
          <li><a href="<%= url_for :controller => :File, :action => :browse_filesystem %>">Browse filesystem</a></li>
       </ul>
     </div>
+<%
+=begin %>        
 
     <div data-role="collapsible"  data-filter="ORM object relational mapper database sql model reset">
       <h3>ORM</h3>
@@ -229,6 +244,8 @@
             <li><a href="<%= url_for :controller => :ORM, :action => :js_model_menu %>">JS Model operations</a></li>
        </ul>
     </div>
+<%
+=end %>        
 
     <div data-role="collapsible"  data-filter="screenorientation autorotate callback change">
         <h3>Screen orientation</h3>
@@ -256,6 +273,8 @@
           <% end %>  
         </ul>
     </div>
+<%
+=begin %>        
 
     <div data-role="collapsible" data-filter="signal strength indicator">
       <h3>Signal</h3>
@@ -269,6 +288,9 @@
         <% end %>
       </ul>
     </div>
+
+<%
+=end %>        
 
 <% 
 =begin
@@ -299,7 +321,13 @@
        <li><a href="<%= url_for :controller => :System, :action => :confirm_install_app %>">Install / uninstall other applications</a></li>
        <li><a href="<%= url_for :controller => :System, :action => :get_version %>">Detecting version information</a></li>
        <li><a href="<%= url_for :controller => :System, :action => :get_local_serverport %>">LocalServerPort for debug purposes</a></li>
+<%
+=begin
+%>
        <li><a href="<%= url_for :controller => :System, :action => :confirm_zip %>">Zipping files</a></li>      
+<%
+=end
+%>
      </ul>
         
     </div>

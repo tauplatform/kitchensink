@@ -20,7 +20,7 @@ class DatabaseController < Rho::RhoController
     db = open_db
     Rho::Log.info("Database initialized", "Init DB Sample")
     Rho::Notification.showPopup({
-      :title => "RhoMobile 4.0 Kitchen Sink",
+      :title => "Tau Platform Kitchen Sink",
       :message => "Sample database initialized",
       :buttons => ["OK"]
     })
@@ -70,7 +70,7 @@ class DatabaseController < Rho::RhoController
     if !db.isTableExist("users_sample")
       db.close
       Rho::Notification.showPopup({
-        :title => "RhoMobile 4.0 Kitchen Sink",
+        :title => "Tau Platform Kitchen Sink",
         :message => "Please seed the database before running this sample",
         :buttons => ["OK"]
       })
@@ -115,7 +115,7 @@ class DatabaseController < Rho::RhoController
     
     db.close
     Rho::Notification.showPopup({
-        :title => "RhoMobile 4.0 Kitchen Sink",
+        :title => "Tau Platform Kitchen Sink",
         :message => "Seed Succeeded",
         :buttons => ["OK"]
       })

@@ -45,7 +45,7 @@ class NativeTabbarController < Rho::RhoController
   
   def tabbar_callback
     Rho::Notification.showPopup({
-      :title => "RhoMobile 4.0 Kitchen Sink",
+      :title => "Tau Platform Kitchen Sink",
       :message => "Switching to tab #{@params["tab_index"]}",
       :buttons => ["OK"]
     })

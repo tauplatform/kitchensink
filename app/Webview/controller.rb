@@ -52,7 +52,7 @@ class WebviewController < Rho::RhoController
     filename = Rho::RhoFile.join(Rho::Application.userFolder,'current_page.jpeg')
     Rho::WebView.save('jpeg',filename)
     Rho::Notification.showPopup({
-      :title => "RhoMobile 4.0 Kitchen Sink",
+      :title => "Tau Platform Kitchen Sink",
       :message => "Current page was saved in the #{filename}",
       :buttons => ["OK"]
     })

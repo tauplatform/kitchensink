@@ -31,7 +31,7 @@ class NativeToolbarController < Rho::RhoController
 
   def show_alert
     Rho::Notification.showPopup({
-      :title => "RhoMobile 4.0 Kitchen Sink",
+      :title => "Tau Platform Kitchen Sink",
       :message => "This alert was invoked from a NativeToolbar button",
       :buttons => ["OK"]
     })
