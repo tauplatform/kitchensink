@@ -1,7 +1,7 @@
 KitchenSink.Samples.System = KitchenSink.Samples.System || (function($, KitchenSink) {
 	function capabilities() {
 		// Returns true if device supports Motorola device capabilities, such as Scanner, etc.
-		var is_motorola_device = Rho.System.isMotorolaDevice;
+		var is_symbol_device = Rho.System.isSymbolDevice;
 
 		var has_calendar = Rho.System.hasCalendar;
 		var has_camera = Rho.System.hasCamera;
@@ -11,7 +11,7 @@ KitchenSink.Samples.System = KitchenSink.Samples.System || (function($, KitchenS
 		var has_sqlite = Rho.System.hasSqlite;
 		var has_touchscreen = Rho.System.hasTouchscreen;
 
-		message = "Motorola device: " + is_motorola_device + "\n" + "Calendar: " + has_calendar + "\n" + "Camera: " + has_camera + "\n" + "Cell network: " + has_cell_network + "\n" + "WiFi: " + has_wifi_network + "\n" + "Network: " + has_network + "\n" + "SQLite: " + has_sqlite + "\n" + "Touchscreen: " + has_touchscreen;
+		message = "Symbol device: " + is_symbol_device + "\n" + "Calendar: " + has_calendar + "\n" + "Camera: " + has_camera + "\n" + "Cell network: " + has_cell_network + "\n" + "WiFi: " + has_wifi_network + "\n" + "Network: " + has_network + "\n" + "SQLite: " + has_sqlite + "\n" + "Touchscreen: " + has_touchscreen;
 
 		alert(message);
 	}

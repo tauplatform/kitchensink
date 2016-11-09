@@ -12,8 +12,8 @@ class SystemController < Rho::RhoController
   
   
   def capabilities 
-  	# Returns true if device supports Motorola device capabilities, such as Scanner, etc.
-  	@is_motorola_device = Rho::System.isMotorolaDevice
+  	# Returns true if device supports Symbol device capabilities, such as Scanner, etc.
+  	@is_symbol_device = Rho::System.isSymbolDevice
   	@has_calendar = Rho::System.hasCalendar
   	@has_camera = Rho::System.hasCamera
     @has_cell_network = Rho::System.hasCellNetwork

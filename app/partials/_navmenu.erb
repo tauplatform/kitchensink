@@ -79,7 +79,7 @@
       <h3>Card reader</h3>
       
       <ul data-role="listview" data-inset="true">
-      <% if (Rho::System.platform == "ANDROID" ||  Rho::System.platform == "WINDOWS") &&  (Rho::System.isMotorolaDevice && !Rho::System.isRhoSimulator )%>   
+      <% if (Rho::System.platform == "ANDROID" ||  Rho::System.platform == "WINDOWS") &&  (Rho::System.isSymbolDevice && !Rho::System.isRhoSimulator )%>
         <% if !Rho::CardReader.enumerate.empty? %>
           <li><a href="<%= url_for(:controller => :Cardreader, :action => :open_cardreader) %>">Connecting to the card reader</a></li>
           <li><a href="<%= url_for(:controller => :Cardreader, :action => :properties) %>">Setting card reader properties</a></li>
@@ -87,7 +87,7 @@
           <li>Device does not have a Cardreader</li>
         <% end %>
       <% else %>
-         <li>Card reader is supported only on Android and Windows Mobile. It is available only on Motorola Solutions devices.</li>
+         <li>Card reader is supported only on Android and Windows Mobile. It is available only on Symbol devices.</li>
       <% end %> 
      </ul>
       
@@ -119,10 +119,10 @@
       <h3>Keystate</h3>
       
       <ul data-role="listview" data-inset="true">
-        <% if Rho::System.platform == "WINDOWS" && (Rho::System.isMotorolaDevice && !Rho::System.isRhoSimulator) %>
+        <% if Rho::System.platform == "WINDOWS" && (Rho::System.isSymbolDevice && !Rho::System.isRhoSimulator) %>
           <li><a href="<%= url_for :controller => :Keystate, :action => :index %>">Show key state icons</a></li>
         <% else %>
-          <li>Keystate is only supported on a subset of Motorola Solutions' Windows Mobile.</li>
+          <li>Keystate is only supported on a subset of Symbol' Windows Mobile.</li>
         <% end %>
       </ul>
     </div>

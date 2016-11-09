@@ -8,7 +8,7 @@
     Enabling only a subset of all recognized symbologies can speed up recognition. This sample will let you enable a single symbology from a preset list and will automatically attempt to scan a barcode afterwards. Please check the source code for more details.
   " }
   %>
-  <% if (Rho::System.isMotorolaDevice) %> 
+  <% if (Rho::System.isSymbolDevice) %>
     <%= render :partial => "/partials/language_tabs" %>
       <form action ="<%= url_for(:action => :set_symbology) %>">
         <div data-role="controlgroup">

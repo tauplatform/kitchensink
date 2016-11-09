@@ -12,7 +12,7 @@
     
 
       <div class="sample ruby">
-        <% if (Rho::System.platform == "ANDROID" || Rho::System.platform == "WINDOWS") && (!Rho::System.isRhoSimulator && Rho::System.isMotorolaDevice )%>
+        <% if (Rho::System.platform == "ANDROID" || Rho::System.platform == "WINDOWS") && (!Rho::System.isRhoSimulator && Rho::System.isSymbolDevice )%>
           <a href="<%= url_for :action => :beep %>" data-role="button">Beep</a>
         <% end %>
         <% if Rho::System.platform != "WP8" %>
@@ -22,7 +22,7 @@
       </div>
       
       <div class="sample javascript">
-        <% if (Rho::System.platform == "ANDROID" || Rho::System.platform == "WINDOWS") && (!Rho::System.isRhoSimulator && Rho::System.isMotorolaDevice )%>
+        <% if (Rho::System.platform == "ANDROID" || Rho::System.platform == "WINDOWS") && (!Rho::System.isRhoSimulator && Rho::System.isSymbolDevice )%>
     	    <a href="#" data-role="button" onclick="KitchenSink.Samples.Notification.beep()">Beep</a>
         <% end %>
         <% if Rho::System.platform != "WP8" %>

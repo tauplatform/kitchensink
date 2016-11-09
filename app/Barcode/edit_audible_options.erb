@@ -9,7 +9,7 @@
   " }
   %>
 
-  <% if (Rho::System.isMotorolaDevice) %> 
+  <% if (Rho::System.isSymbolDevice) %>
 
   <%= render :partial => "/partials/language_tabs" %>
 
@@ -19,7 +19,7 @@
         Decode volume:
       </label>
       <input type="range" name="decodeVolume" id="slider-volume" min="0" max="5" value="3">
-      
+
       <label for="sider-frequency">
         Tone frequency:
       </label>
@@ -30,17 +30,17 @@
       </label>
       <input type="range" name="decodeDuration" id="slider-duration" min="500" max="3000" step="100" value="1000">
 
-      <div class="sample ruby">      
+      <div class="sample ruby">
           <a href="#" onclick="KitchenSink.Samples.Barcode.set_audible_options_with_ruby()" data-role="button">Set audible options</a>
       </div>
-      
+
       <div class="sample javascript">
           <a href="#" onclick="KitchenSink.Samples.Barcode.set_audible_options()" data-role="button">Set audible options</a>
       </div>
-      
+
     </form>
   <% else %>
-    Audible options are only available on Motorola Solutions devices
+    Audible options are only available on Symbol devices
   <% end %>
-  
+
 </div>
