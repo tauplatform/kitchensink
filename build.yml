@@ -1,4 +1,4 @@
-sdk: ../tau
+#sdk: ../../rhomobile/rhodes
 sdkversion: "4.0.0"
 name: "Kitchen Sink"
 version: "1.30.59"
@@ -29,6 +29,7 @@ extensions:
   - mediaplayer
   - screenorientation
   - sensor
+  - barcode
 capabilities:
   - camera
   - calendar
